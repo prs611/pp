@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <form id = "Calci">
+        Number 1 <input type = "number" name = "Val1" required>
+        Number 2 <input type = "number" name = "Val2" required >
+        <input type = "button" onclick="Add()" value = "Addition">
+        <input type = "button" onclick="Sub()" value = "Subtraction">
+        <input type = "button" onclick="Mul()" value = "Multiply">
+        <input type = "button" onclick="Div()" value = "Divide">
+        <input type="reset" value = "reset">
+    </form>
+    <p id = "Result"></p>
+    <script>
+            function Add()
+            {
+                let var1 = document.forms.Calci.Val1.value ;
+                let var2 = document.forms.Calci.Val2.value ;
+                let var3 = var1+var2 ;
+                console.log(typeof var1) ;
+                document.getElementById("Result").innerHTML = var1 + var2;
+            }
+            function Sub()
+            {
+                let var1 = document.forms.Calci.Val1.value ;
+                let var2 = document.forms.Calci.Val2.value ;
+                document.getElementById("Result").innerHTML = var1 - var2 ;
+                console.log(var1-var2) ;
+            }
+            function Mul()
+            {
+                let var1 = document.forms.Calci.Val1.value ;
+                let var2 = document.forms.Calci.Val2.value ;
+                document.getElementById("Result").innerHTML = var1 * var2 ;
+            }
+            function Div()
+            {
+                let var1 = document.forms.Calci.Val1.value ;
+                let var2 = document.forms.Calci.Val2.value ;
+                console.log(var1) ;
+                console.log(var2) ;
+                document.getElementById("Result").innerHTML = var1 / var2 ;
+            }
+    </script>
+</body>
+</html>
